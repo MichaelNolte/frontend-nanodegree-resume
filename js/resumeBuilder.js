@@ -8,7 +8,7 @@ var work = {
 			"title": "training coordinator",
 			"employer": "sodexo services gmbh",
 			"dates": "march 2016-today",
-			"city": "rüsselsheim",
+			"location": "rüsselsheim",
 			"description": ""
 		},
 		{
@@ -76,7 +76,7 @@ var bio = {
 	"name": "michael nolte",
 	"role": "udacity student",
 	"skills": [
-		"html", "css", "jacaScript", "jQuery", "bootstrap"],
+		"html", "css", "javaScript", "jQuery", "bootstrap"],
 	"contacts": {
 		"mobile": "+49-178-5335968",
 		"email": "michaelnolte0815@gmail.com",
@@ -89,9 +89,27 @@ var bio = {
 	"welcome message": "hello. i am michael, and i take courses at udacity."
 };
 
-var formattedName=HTMLheaderName.replace("%data%", bio.name);
-var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
+
+
+/*header*/
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+
+$("#header").append(HTMLskillsStart);
+
+if(bio.skills.length > 0) {
+	for(i = 0; i < bio.skills.length; i++){
+		var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+		$("#header").append(formattedSkills);
+	}
+}
+
+
+
+
+
+
 
