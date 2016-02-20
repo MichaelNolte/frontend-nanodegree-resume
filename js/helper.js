@@ -136,7 +136,6 @@ function initializeMap() {
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
-      console.log(education.schools[school]);
       locations.push(school.city);
     });
 

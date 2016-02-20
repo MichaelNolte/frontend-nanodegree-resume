@@ -33,6 +33,13 @@ var work = {
 			"dates": "june 2014-march 2016",
 			"location": "rüsselsheim, germany",
 			"description": "Lorem Ipsum Lorem Dorem"
+		},
+		{
+			"employer": "mkn finanzdienstleistungen",
+			"title": "office assistant",
+			"dates": "october 2008-august 2010",
+			"location": "rüsselsheim, germany",
+			"description": "Lorem Ipsum Lorem Dorem"
 		}
 	]
 };
@@ -46,10 +53,10 @@ var projects = {
 			"images": ["#", "#", "#"]
 		},
 		{
-			"title": "",
-			"dates": "",
-			"description": "",
-			"images": []
+			"title": "2",
+			"dates": "2",
+			"description": "2",
+			"images": ["#", "#", "#"]
 		}
 	]
 };
@@ -111,11 +118,13 @@ function formatLine(htmlform, content) {
 
 
 function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
+	var j = 0;
 	for(var variable in obj) { //go over every element of object
 
 		$(HTMLlocationArray[0]).append(HTMLformatArray[0])
 
 		for(i=0;i<countProperties(elementArray); i++) { //go over every item in object element
+			console.log(obj + i);
 
 			if(obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
 				var store1 = formatLine(HTMLformatArray[i+1], obj[variable][elementArray[i]]);
@@ -162,7 +171,7 @@ if(bio.skills.length > 0) {
 
 /*display workExperience*/
 var workObj = work.jobs;
-var workHTMLlocationArray = ["#workExperience", ".work-entry"];
+var workHTMLlocationArray = ["#workExperience", ".work-entry:last"];
 var workHTMLformatArray = [HTMLworkStart, HTMLworkEmployer, HTMLworkTitle, HTMLworkDates, HTMLworkLocation, HTMLworkDescription];
 var workElementArray = ["employer", "title", "dates", "location", "description"];
 
