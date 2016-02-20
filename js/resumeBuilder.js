@@ -13,7 +13,6 @@ var bio = {
 		"github": "michaelnolte",
 		"linkedin": "michael-nolte-870016b4",
 		"location": "frankfurt, germany"
-
 	},
 	"pictureURL": "images/fry.jpg",
 	"welcome message": "hello. i am michael, and i take courses at udacity."
@@ -93,23 +92,6 @@ var education = {
 
 
 
-/*header*/
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-var formattedContact = HTMLcontactGeneric.replace("%date%", bio.contact);
-
-
-$("#header").append(HTMLskillsStart);
-if(bio.skills.length > 0) {
-	for(i = 0; i < bio.skills.length; i++){
-		var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
-		$("#skills").append(formattedSkills);
-	};
-};
 
 
 /*functions used to display page elements*/
@@ -132,11 +114,10 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 	for(var variable in obj) { //go over every element of object
 
 		$(HTMLlocationArray[0]).append(HTMLformatArray[0])
-		console.log(variable)
 
 		for(i=0;i<countProperties(elementArray); i++) { //go over every item in object element
 
-			if(obj===work.jobs&&i===0 || obj===education.schools && i===0) {
+			if(obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
 				var store1 = formatLine(HTMLformatArray[i+1], obj[variable][elementArray[i]]);
 				var store2 = formatLine(HTMLformatArray[i+2], obj[variable][elementArray[i+1]]);
 				var store3 = store1 + store2
@@ -151,6 +132,32 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 		}
 	}
 }
+
+/*display header*/
+$("#header").append(formatLine(HTMLheaderName, bio.name));
+$("#header").append(formatLine(HTMLheaderRole, bio.role));
+
+
+var contactsHTMLformatsArray = [HTMLmobile, HTMLemail, HTMLgithub, HTMLlinkedin, HTMLlocation]
+
+var i = 0;
+$("#header").append(HTMLcontactStart);
+for(var contact in bio.contacts){
+	$("#contacts").append(formatLine(contactsHTMLformatsArray[i], bio.contacts[contact]));
+	console.log(bio.contacts[contact]);
+	i++
+}
+
+$("#header").append(formatLine(HTMLbioPic, bio.pictureURL));
+$("#header").append(formatLine(HTMLwelcomeMsg, bio["welcome message"]));
+$("#header").append(HTMLskillsStart);
+
+if(bio.skills.length > 0) {
+	for(i = 0; i < bio.skills.length; i++){
+		var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+		$("#skills").append(formattedSkills);
+	};
+};
 
 
 /*display workExperience*/
@@ -187,6 +194,14 @@ var onlineCoursesHTMLformat = [HTMLschoolStart, HTMLonlineTitle, HTMLonlineSchoo
 var onlineCoursesElements = ["title", "school", "dates", "url"];
 
 formatColumn(onlineCoursesHTMLformat, onlineCoursesHTMLlocationArray, onlineCoursesElements, onlineCoursesObj);
+
+
+
+
+
+
+
+
 
 /*gather click locations*/
 $(document).click(function(loc) {
