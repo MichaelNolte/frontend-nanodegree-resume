@@ -21,8 +21,11 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry,
-.teaching-entry {
+.teaching-entry,
+.ptalks-entry {
   padding: 0 5%;
+  margin: 10px;
+  margin-right: 20vw;
 }
 
 h1 {

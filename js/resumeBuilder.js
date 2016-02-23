@@ -154,7 +154,7 @@ var publicTalks = {
 		},
 		{
 			"title": "gertrud müller: die erste hälfte meines lebens. erinnerungen 1915-1950 (book presentation).",
-			"data": "annual conference of the german ravensbrück committee in fürstenberg",
+			"data": "annual conference of the german ravensbrück committee, fürstenberg",
 			"date": "september 2005"
 		}
 	]
@@ -403,9 +403,8 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 		$(HTMLlocationArray[0]).append(HTMLformatArray[0])
 
 		for(i=0;i<countProperties(elementArray); i++) { //go over every item in object element
-			console.log(obj + i);
 
-			if(obj===teaching.courses&&i===0 || obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
+			if(obj===publicTalks.publicTalks&&i===1 || obj===teaching.courses&&i===0 || obj===teaching.courses&&i===2 || obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
 				var store1 = formatLine(HTMLformatArray[i+1], obj[variable][elementArray[i]]);
 				var store2 = formatLine(HTMLformatArray[i+2], obj[variable][elementArray[i+1]]);
 				var store3 = store1 + store2
@@ -432,7 +431,6 @@ var i = 0;
 $("#header").append(HTMLcontactStart);
 	for(var contact in bio.contacts){
 	$("#contacts").append(formatLine(contactsHTMLformatsArray[i], bio.contacts[contact]));
-	console.log(bio.contacts[contact]);
 	i++
 }
 
@@ -456,13 +454,22 @@ var workElementArray = ["employer", "title", "dates", "location", "description"]
 
 formatColumn(workHTMLformatArray, workHTMLlocationArray, workElementArray, workObj);
 
-/*display projects*/
+/*display teaching*/
 var teachingObj = teaching.courses;
 var teachingHTMLlocationArray = ["#teaching", ".teaching-entry:last"];
 var teachingHTMLformatArray = [HTMLteachingStart, HTMLteachingTitle, HTMLteachingProfessor, HTMLteachingDepartment, HTMLteachingDate];
 var teachingElementArray = ["title", "professor", "department", "date"];
 
 formatColumn(teachingHTMLformatArray, teachingHTMLlocationArray, teachingElementArray, teachingObj);
+
+/*display public talks*/
+
+var pTalksObj = publicTalks.publicTalks;
+var pTalksHTMLlocationArray = ["#public-talks", ".ptalks-entry:last"];
+var pTalksHTMLformatArray = [HTMLpTalksStart, HTMLpTalksTitle, HTMLpTalksData, HTMLpTalksDate];
+var pTalksElementArray = ["title", "data", "date"];
+
+formatColumn(pTalksHTMLformatArray, pTalksHTMLlocationArray, pTalksElementArray, pTalksObj);
 
 /*display projects*/
 var projectsObj = projects.projects;
