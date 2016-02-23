@@ -36,6 +36,12 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+var HTMLteachingStart = '<div class="teaching-entry"></div>';
+var HTMLteachingTitle = '<div><a href="#">%data%';
+var HTMLteachingProfessor = ' -- %data%</a></div>';
+var HTMLteachingDepartment = '<div class="date-text">%data%</div>';
+var HTMLteachingDate = '<div class="location-text">%data%</div><p><br></p>'; /*the last line's a hack; not a good one i admit; deal with css layout later and erase last line*/
+
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';

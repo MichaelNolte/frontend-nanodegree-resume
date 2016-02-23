@@ -10,7 +10,7 @@
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <meta name="viewport" content="width=device-width">
 </head>
 
@@ -27,29 +27,36 @@
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+      <h2>work experience</h2>
+    </div>
+    <div id="teaching">
+      <h2>teaching</h2>
+    </div>
+    <div id="public talks" class="gray">
+      <h2>public talks</h2>
+    </div>
+    <div id="publications">
+      <h2>publications</h2>
+    </div>
+    <div id="fellowships and awards" class="gray">
+      <h2>fellowships and awards</h2>
     </div>
     <div id="projects">
-      <h2>Projects</h2>
+      <h2>projects</h2>
     </div>
     <div id="education" class="gray">
-      <h2>Education</h2>
+      <h2>education</h2>
     </div>
     <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+      <h2>where i've lived and worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h2 class="orange center-text">let's connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
   </div>
 
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
   <script src="js/resumeBuilder.js"></script>
 
 
@@ -77,25 +84,25 @@
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style.backgroundColor = '#000000';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementById('header').style.backgroundColor = '#000000';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.backgroundColor = '#000000';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.backgroundColor = '#000000';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.backgroundColor = '#000000';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+      document.getElementById('lets-connect').style.backgroundColor = '#000000';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+      document.getElementById('mapDiv').style.backgroundColor = '#000000';
     }
   </script>
 </body>

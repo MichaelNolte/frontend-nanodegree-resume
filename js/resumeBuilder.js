@@ -25,41 +25,266 @@ var work = {
 			"title": "training coordinator",
 			"dates": "march 2016-today",
 			"location": "rüsselsheim, germany",
-			"description": "Lorem Ipsum Lorem Dorem"
+			"description": "developed e-learning content, administrated the company's intranet, organised trainings, adapted international trainings to the german organization"
 		},
 		{
 			"employer": "sodexo services gmbh",
 			"title": "e-learning specialist",
 			"dates": "june 2014-march 2016",
 			"location": "rüsselsheim, germany",
-			"description": "Lorem Ipsum Lorem Dorem"
+			"description": "developed e-learning content, administrated sodexo’s learning management system, supported hr projects"
+		},
+		{
+			"employer": "abc-clio",
+			"title": "independent contractor",
+			"dates": "june 2014-march 2016",
+			"location": "santa barbara, california",
+			"description": "contributing writer for the database modern genocide understanding causes and consequences"
+		},
+		{
+			"employer": "fu berlin, center für digitale systeme (cedis)",
+			"title": "freelance collaborator",
+			"dates": "june 2012",
+			"location": "berlin, germany",
+			"description": "indexed concentration camps for the online portal “zeugen der shoah” (“witnesses to the shoah”)"
+		},
+		{
+			"employer": "clark university",
+			"title": "seminar instructor",
+			"dates": "september 2011-june 2013",
+			"location": "worcester, massachusetts",
+			"description": "prepared and gave seminars, graded students"
 		},
 		{
 			"employer": "mkn finanzdienstleistungen",
 			"title": "office assistant",
 			"dates": "october 2008-august 2010",
-			"location": "rüsselsheim, germany",
-			"description": "Lorem Ipsum Lorem Dorem"
+			"location": "marburg, germany",
+			"description": "customer care, preparation of client seminars, office administration"
+		},
+		{
+			"employer": "yad vashem, givatayim branch",
+			"title": "research assistant",
+			"dates": "june 2006-january 2007",
+			"location": "givatayim, israel",
+			"description": "instructed interns and volunteers, contributed to articles in german and english language, conducted archival research, held oral history interviews"
+		},
+		{
+			"employer": "studienkreis deutscher widerstand",
+			"title": "intern",
+			"dates": "october 2001-march 2002",
+			"location": "frankfurt, germany",
+			"description": "preparied and published the book: gertrud müller: die erste hälfte meines lebens. erinnerungen 1915-1950. nach gesprächen aufgezeichnet von michael nolte und ursula krause-schmitt. herausgegeben von der lagergemeinschaft ravensbrück/ freundeskreis e.v."
 		}
 	]
 };
 
+var teaching = {
+	"courses": [
+		{
+			"title": "europe in the age of extremes",
+			"professor": "prof. thomas kühne",
+			"department": "department of history, clark university",
+			"date": "spring semester 2013"
+		},
+		{
+			"title": "european mind: history and theory",
+			"professor": "prof. olga litvak",
+			"department": "department of history, clark university",
+			"date": "fall 2012"
+		},
+		{
+			"title": "writing history",
+			"professor": "prof. nina kushner",
+			"department": "department of history, clark university",
+			"date": "spring 2012"
+		},
+		{
+			"title": "german film and frankfurt school",
+			"professor": "prof. robert tobin",
+			"department": "department of foreign languages and literatures, clark university",
+			"date": "spring 2012"
+		},
+		{
+			"title": "introduction to history of genocide",
+			"professor": "prof. taner akçam",
+			"department": "department of history, clark university",
+			"date": "fall 2011"
+		},
+		{
+			"title": "holocaust: agency and action",
+			"professor": "prof. debórah dwork",
+			"department": "department of history, clark university",
+			"date": "fall 2010"
+		}
+	]
+};
+
+var publicTalks = {
+	"publicTalks": [
+		{
+			"title": "magicians, crooks, and lunatics: images of jews in german expressionist film",
+			"data": "the association for the study of nationalities, 2015 world convention, columbia university, new york city",
+			"date": "april 2015"
+		},
+		{
+			"title": "jewish lunatics in nazi germany: female patients at hadamar 1933-1939",
+			"data": "invited guest lecture, corcoran department of history, university of virginia",
+			"date": "april 2015"
+		},
+		{
+			"title": "magicians, crooks, and lunatics: images of jews in german expressionist film (paper presented by co-author)",
+			"data": "association for jewish studies 46th annual conference, hilton baltimore",
+			"date": "december 2014"
+		},
+		{
+			"title": "remembering nazism in germany and france (panel discussion)",
+			"data": "invited talk, institut culturel franco-allemand, universität tübingen",
+			"date": "may 2014"
+		},
+		{
+			"title": "the nazi system of mass murder: from euthanasia to the holocaust",
+			"data": "invited guest lecture, worcester state university",
+			"date": "february 2013"
+		},
+		{
+			"title": "encounters of victims and perpetrators of genocide (panel chair)",
+			"data": "second international graduate students’ conference for holocaust and genocide studies, clark university",
+			"date": "march 2012"
+		},
+		{
+			"title": "gertrud müller: die erste hälfte meines lebens. erinnerungen 1915-1950 (book presentation).",
+			"data": "annual conference of the german ravensbrück committee in fürstenberg",
+			"date": "september 2005"
+		}
+	]
+};
+
+
+var publications = {
+	"books": [
+		{
+			"title": "gertrud müller: die erste hälfte meines lebens. erinnerungen 1915 – 1950. nach gesprächen aufgezeichnet von michael nolte und ursula krause-schmitt",
+			"data": "renchen: druckwerkstatt renchen, 2004"
+		}
+	],
+	"blogEntries": [
+		{
+			"title": "the conduct of jazz",
+			"data": "http://jazzaddikt.tumblr.com, december 2015",
+			"url": "http://www.flowersinagun.com/lana-del-rey-zitadelle-spandau-berlin/"
+		},
+		{
+			"title": "the beauty of breaking stuff",
+			"data": "flowersinagun.com, 2 may 2015",
+			"url": "http://www.flowersinagun.com/phantogram/"
+		},
+		{
+			"title": "neneh cherry @ palmengarten frankfurt",
+			"data": "flowersinagun.com, 11 august 2014",
+			"url": "http://www.flowersinagun.com/phantogram/"
+		},
+		{
+			"title": "phantogram @ zoom club",
+			"data": "flowersinagun.com, 19 july 2014",
+			"url": "http://www.flowersinagun.com/phantogram/"
+		},
+		{
+			"title": "lana del rey @ zitadelle spandau",
+			"data": "flowersinagun.com, 28 june 2014",
+			"url": "http://www.flowersinagun.com/lana-del-rey-zitadelle-spandau-berlin/"
+		}
+	],
+	"articlesEssaysOthers": [
+		{
+			"title": "verbrechen auch über das ende des krieges hinaus. das „euthanasieprogramm“ in der endphase des nationalsozialismus",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 80 (2014)"
+		},
+		{
+			"title": "nosferatu (f.w. murnau, 1922)",
+			"data": "german cinema: a critical filmography to 1945, ed. todd herzog (montréal: caboose, forthcoming)"
+		},
+		{
+			"title": "waxworks (paul leni, 1924) (together with thomas nolte)",
+			"data": "german cinema: a critical filmography to 1945, ed. todd herzog (montréal: caboose, forthcoming)"
+		},
+		{
+			"title": "hitler and the holocaust: the role of the german people",
+			"data": "modern genocide: understanding causes and consequences. abc-clio, 2013"
+		},
+		{
+			"title": "bureaucracy",
+			"data": "modern genocide: understanding causes and consequences. abc-clio, 2013"
+		},
+		{
+			"title": "compensation",
+			"data": "modern genocide: understanding causes and consequences. abc-clio, 2013"
+		},
+		{
+			"title": "theodor körner im kz: wie die mahn- und gedenkstätten wöbbelin den nationalsozialismus relativieren",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 61 (2005)"
+		},
+		{
+			"title": "siegen für den frieden (together with saskia wenger",
+			"data": "konkret 10/2004"
+		},
+		{
+			"title": "ig farben aufgelöst (together with saskia wenger",
+			"data": "ravensbrückblätter 118 (march 2004)"
+		}
+	],
+	"bookReviews": [
+		{
+			"title": "barbara stelzl-marx, das lager graz-liebenau in der ns zeit (graz: leykam, 2012)",
+			"data": "global war studies (forthcoming))"
+		},
+		{
+			"title": "anthony julius, trials of the diaspora: a history of antisemitism in england (oxford university press, 2010)",
+			"data": "human rights review 16 (4)"
+		},
+		{
+			"title": "daniel blatman, the death marches (cambridge, ma: harvard university press, 2011)",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 75 (2012)"
+		},
+		{
+			"title": "thomas faltin, im angesicht des todes: das kz-außenlager echterdingen 1944/45 (landeszentrale für politische bildung baden-württemberg: filderstadt; leinfelden-echterdingen, 2009)",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 71 (2010)"
+		},
+		{
+			"title": "peter gingold, paris – boulevard st. martin no. 11: ein jüdischer antifaschist und kommunist in résistance und bundesrepublik, ed. ulrich schneider (köln: papyrossa, 2009)",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 70 (2009)"
+		}
+	],
+	"interviews": [
+		{
+			"title": "‘auf dem schnellsten weg nach deutschland’ (teil 2). peter gingold im gespräch mit saskia wenger und michael nolte (together with saskia wenger)",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 63 (2006)"
+		},
+		{
+			"title": "‘auf dem schnellsten weg nach deutschland’ (teil 1). peter gingold im gespräch mit saskia wenger und michael nolte (together with saskia wenger)",
+			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 62 (2005)"
+		},
+	]
+};
+
+
 var projects = {
 	"projects": [
 		{
-			"title": "title1",
-			"dates": "dates1",
-			"description": "description1",
+			"title": "portfolio page",
+			"dates": "december 2015-january 2016",
+			"description": "a page to showcase my work",
 			"images": ["#", "#", "#"]
 		},
 		{
-			"title": "2",
-			"dates": "2",
-			"description": "2",
+			"title": "interactive resumee",
+			"dates": "february 2016",
+			"description": "an interactive resume page",
 			"images": ["#", "#", "#"]
 		}
 	]
 };
+
 
 var education = {
 	"schools": [
@@ -73,23 +298,77 @@ var education = {
 		{
 			"name": "clark university",
 			"city": "worcester, massachusetts",
-			"degree": "abd",
+			"degree": "phd (entered abd phase)",
 			"major": "modern european history",
 			"dates": "2009-today"
 		}
 	],
 	"online courses": [
 		{
-			"title": "1",
-			"school": "1",
-			"dates": "1",
-			"url": "1"
+			"title": "javascript basics",
+			"school": "udacity",
+			"dates": "february 2016",
+			"url": "https://www.udacity.com/courses/ud804"
 		},
 		{
-			"title": "2",
-			"school": "2",
-			"dates": "2",
-			"url": "2"
+			"title": "responsive images",
+			"school": "udacity",
+			"dates": "october 2015",
+			"url": "https://www.udacity.com/courses/ud882"
+		},
+		{
+			"title": "responsive web design fundamentals",
+			"school": "udacity",
+			"dates": "october 2015",
+			"url": "https://www.udacity.com/courses/ud893"
+		},
+		{
+			"title": "intro to html and css",
+			"school": "udacity",
+			"dates": "september 2015",
+			"url": "https://www.udacity.com/courses/ud304"
+		},
+		{
+			"title": "the abcs of instructional design",
+			"school": "udemy",
+			"dates": "august 2015",
+			"url": "https://ude.my/UC-EHAVXK9B"
+		},
+		{
+			"title": "introduction to java programming - part 1",
+			"school": "edx",
+			"dates": "january 2016",
+			"url": "https://verify.edx.org/cert/d2b7ed1728294fde9af522e4ca6a1a58"
+		},
+		{
+			"title": "introduction to programming with java part 1: starting to program in java",
+			"school": "edx",
+			"dates": "july 2015",
+			"url": "https://verify.edx.org/cert/0550f9092a8248d9905c04ee748658bd"
+		},
+		{
+			"title": "computer science 101",
+			"school": "stanford online",
+			"dates": "may 2015",
+			"url": "https://verify.lagunita.stanford.edu/SOA/a25d73f06d544ce9a1b83c646fe9e19a"
+		},
+		{
+			"title": "behavioral economics in action",
+			"school": "edx",
+			"dates": "december 2013",
+			"url": "https://verify.edx.org/cert/94f4d7d50eb24f2682ed5b0971300c3f"
+		},
+		{
+			"title": "understanding media by understanding google",
+			"school": "coursera",
+			"dates": "november 2013",
+			"url": "https://www.coursera.org/course/googlemedia"
+		},
+		{
+			"title": "intro to descriptive statistics",
+			"school": "udacity",
+			"dates": "august 2013",
+			"url": "https://www.udacity.com/courses/ud827"
 		}
 	]
 };
@@ -126,7 +405,7 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 		for(i=0;i<countProperties(elementArray); i++) { //go over every item in object element
 			console.log(obj + i);
 
-			if(obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
+			if(obj===teaching.courses&&i===0 || obj===work.jobs&&i===0 || obj===education.schools && i===0 || obj === education["online courses"] && i === 0) {
 				var store1 = formatLine(HTMLformatArray[i+1], obj[variable][elementArray[i]]);
 				var store2 = formatLine(HTMLformatArray[i+2], obj[variable][elementArray[i+1]]);
 				var store3 = store1 + store2
@@ -151,7 +430,7 @@ var contactsHTMLformatsArray = [HTMLmobile, HTMLemail, HTMLgithub, HTMLlinkedin,
 
 var i = 0;
 $("#header").append(HTMLcontactStart);
-for(var contact in bio.contacts){
+	for(var contact in bio.contacts){
 	$("#contacts").append(formatLine(contactsHTMLformatsArray[i], bio.contacts[contact]));
 	console.log(bio.contacts[contact]);
 	i++
@@ -176,6 +455,14 @@ var workHTMLformatArray = [HTMLworkStart, HTMLworkEmployer, HTMLworkTitle, HTMLw
 var workElementArray = ["employer", "title", "dates", "location", "description"];
 
 formatColumn(workHTMLformatArray, workHTMLlocationArray, workElementArray, workObj);
+
+/*display projects*/
+var teachingObj = teaching.courses;
+var teachingHTMLlocationArray = ["#teaching", ".teaching-entry:last"];
+var teachingHTMLformatArray = [HTMLteachingStart, HTMLteachingTitle, HTMLteachingProfessor, HTMLteachingDepartment, HTMLteachingDate];
+var teachingElementArray = ["title", "professor", "department", "date"];
+
+formatColumn(teachingHTMLformatArray, teachingHTMLlocationArray, teachingElementArray, teachingObj);
 
 /*display projects*/
 var projectsObj = projects.projects;
