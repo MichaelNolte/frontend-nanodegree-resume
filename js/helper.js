@@ -47,6 +47,17 @@ var HTMLpTalksTitle = '<a href="#">%data%</a>';
 var HTMLpTalksData = '<p>%data%';
 var HTMLpTalksDate = ' -- %data%<br></p>'; /*the last line's a hack; not a good one i admit; deal with css layout later and erase last line*/
 
+
+var HTMLpublicationsBooks = '<h3>books</h3>';
+var HTMLpublicationsArtEssOth = '<h3>articles, essays, and other contributions</h3>'
+var HTMLpublicationsReviews = '<h3>book reviews</h3>'
+var HTMLpublicationsInterviews = '<h3>interviews</h3>'
+var HTMLpublicationsBlogs = '<h3>blog entries</h3>'
+var HTMLpublicationsStart = '<div class="publication-entry"></div>';
+var HTMLpublicationsTitle = '<a href="#">%data%</a>';
+var HTMLpublicationsData = '<p>%data%</p>';
+var HTMLpublicationsURL = '<a href="#">%data%</a>';
+
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
@@ -60,7 +71,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3>online classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';

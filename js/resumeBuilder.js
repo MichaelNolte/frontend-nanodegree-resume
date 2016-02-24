@@ -168,33 +168,6 @@ var publications = {
 			"data": "renchen: druckwerkstatt renchen, 2004"
 		}
 	],
-	"blogEntries": [
-		{
-			"title": "the conduct of jazz",
-			"data": "http://jazzaddikt.tumblr.com, december 2015",
-			"url": "http://www.flowersinagun.com/lana-del-rey-zitadelle-spandau-berlin/"
-		},
-		{
-			"title": "the beauty of breaking stuff",
-			"data": "flowersinagun.com, 2 may 2015",
-			"url": "http://www.flowersinagun.com/phantogram/"
-		},
-		{
-			"title": "neneh cherry @ palmengarten frankfurt",
-			"data": "flowersinagun.com, 11 august 2014",
-			"url": "http://www.flowersinagun.com/phantogram/"
-		},
-		{
-			"title": "phantogram @ zoom club",
-			"data": "flowersinagun.com, 19 july 2014",
-			"url": "http://www.flowersinagun.com/phantogram/"
-		},
-		{
-			"title": "lana del rey @ zitadelle spandau",
-			"data": "flowersinagun.com, 28 june 2014",
-			"url": "http://www.flowersinagun.com/lana-del-rey-zitadelle-spandau-berlin/"
-		}
-	],
 	"articlesEssaysOthers": [
 		{
 			"title": "verbrechen auch über das ende des krieges hinaus. das „euthanasieprogramm“ in der endphase des nationalsozialismus",
@@ -264,6 +237,33 @@ var publications = {
 			"title": "‘auf dem schnellsten weg nach deutschland’ (teil 1). peter gingold im gespräch mit saskia wenger und michael nolte (together with saskia wenger)",
 			"data": "informationen. wissenschaftliche zeitschrift des studienkreises deutscher widerstand 1933-1945 62 (2005)"
 		},
+	],
+	"blogEntries": [
+		{
+			"title": "the conduct of jazz",
+			"data": "jazzaddikt.tumblr.com, december 2015",
+			"url": "jazzaddikt.tumblr.com/post/134822662614/the-conduct-of-jazz-a-review-by-michael-nolte"
+		},
+		{
+			"title": "the beauty of breaking stuff",
+			"data": "flowersinagun.com, 2 may 2015",
+			"url": "www.flowersinagun.com/the-beauty-of-breaking-stuff/"
+		},
+		{
+			"title": "neneh cherry @ palmengarten frankfurt",
+			"data": "flowersinagun.com, 11 august 2014",
+			"url": "www.flowersinagun.com/neneh-cherry-palmengarten-frankfurt/"
+		},
+		{
+			"title": "phantogram @ zoom club",
+			"data": "flowersinagun.com, 19 july 2014",
+			"url": "http://www.flowersinagun.com/phantogram/"
+		},
+		{
+			"title": "lana del rey @ zitadelle spandau",
+			"data": "flowersinagun.com, 28 june 2014",
+			"url": "http://www.flowersinagun.com/lana-del-rey-zitadelle-spandau-berlin/"
+		}
 	]
 };
 
@@ -420,7 +420,7 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 	}
 }
 
-/*display header*/
+/*display header ---> put code in function*/
 $("#header").append(formatLine(HTMLheaderName, bio.name));
 $("#header").append(formatLine(HTMLheaderRole, bio.role));
 
@@ -470,6 +470,52 @@ var pTalksHTMLformatArray = [HTMLpTalksStart, HTMLpTalksTitle, HTMLpTalksData, H
 var pTalksElementArray = ["title", "data", "date"];
 
 formatColumn(pTalksHTMLformatArray, pTalksHTMLlocationArray, pTalksElementArray, pTalksObj);
+
+/*display publications*/
+/*books*/
+$("#publications").append(HTMLpublicationsBooks);
+var booksObj = publications.books;
+var booksHTMLlocationArray = ["#publications", ".publication-entry:last"];
+var booksHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var booksElementArray = ["title", "data"];
+
+formatColumn(booksHTMLformatArray, booksHTMLlocationArray, booksElementArray, booksObj);
+
+/*articles, essays, other contributions*/
+$("#publications").append(HTMLpublicationsArtEssOth);
+var artEssOthObj = publications.articlesEssaysOthers;
+var artEssOthHTMLlocationArray = ["#publications", ".publication-entry:last"];
+var artEssOthHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var artEssOthElementArray = ["title", "data"];
+
+formatColumn(artEssOthHTMLformatArray, artEssOthHTMLlocationArray, artEssOthElementArray, artEssOthObj);
+
+/*bookReviews*/
+$("#publications").append(HTMLpublicationsReviews);
+var reviewsObj = publications.bookReviews;
+var reviewsHTMLlocationArray = ["#publications", ".publication-entry:last"];
+var reviewsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var reviewsElementArray = ["title", "data"];
+
+formatColumn(reviewsHTMLformatArray, reviewsHTMLlocationArray, reviewsElementArray, reviewsObj);
+
+/*interviews*/
+$("#publications").append(HTMLpublicationsInterviews);
+var interviewsObj = publications.interviews;
+var interviewsHTMLlocationArray = ["#publications", ".publication-entry:last"];
+var interviewsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var interviewsElementArray = ["title", "data"];
+
+formatColumn(interviewsHTMLformatArray, interviewsHTMLlocationArray, interviewsElementArray, interviewsObj);
+
+/*blog entries*/
+$("#publications").append(HTMLpublicationsBlogs);
+var blogsObj = publications.blogEntries;
+var blogsHTMLlocationArray = ["#publications", ".publication-entry:last"];
+var blogsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData, HTMLpublicationsURL];
+var blogsElementArray = ["title", "data", "url"];
+
+formatColumn(blogsHTMLformatArray, blogsHTMLlocationArray, blogsElementArray, blogsObj);
 
 /*display projects*/
 var projectsObj = projects.projects;
