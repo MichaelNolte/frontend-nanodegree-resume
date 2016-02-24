@@ -14,6 +14,31 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+.btn-web,
+.btn-corp,
+.btn-academic {
+  font-size: 12px;
+  background-color: #f44336;
+  position: fixed;
+  margin: 2%;
+  display: inline-block;
+
+}
+
+.btn-web {
+  top: 5%;
+  right: 5%;
+}
+
+.btn-corp {
+  top: 5%;
+  right: 20%;
+}
+
+.btn-academic {
+  top: 5%;
+  right: 35%;
+}
 .clear-fix {
   overflow: auto;
 }
@@ -22,10 +47,9 @@ h6 {
 .work-entry,
 .project-entry,
 .teaching-entry,
-.ptalks-entry {
+.ptalks-entry,
+.publication-entry {
   padding: 0 5%;
-  margin: 10px;
-  margin-right: 20vw;
 }
 
 h1 {
