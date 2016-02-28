@@ -374,10 +374,26 @@ var education = {
 };
 
 
+/*set display variables*/
 
 
+var web = document.getElementById('web');
+var corp = document.getElementById('corp');
+var academic = document.getElementById('academic');
 
+var cvType;
 
+web.onclick = function() {
+	cvType = "web";
+};
+
+corp.onclick = function() {
+	cvType = "corp";
+};
+
+academic.onclick = function() {
+	cvType = "academic";
+};
 
 
 /*functions used to display page elements*/
@@ -455,12 +471,15 @@ var workElementArray = ["employer", "title", "dates", "location", "description"]
 formatColumn(workHTMLformatArray, workHTMLlocationArray, workElementArray, workObj);
 
 /*display teaching*/
+
+
 var teachingObj = teaching.courses;
 var teachingHTMLlocationArray = ["#teaching", ".teaching-entry:last"];
 var teachingHTMLformatArray = [HTMLteachingStart, HTMLteachingTitle, HTMLteachingProfessor, HTMLteachingDepartment, HTMLteachingDate];
 var teachingElementArray = ["title", "professor", "department", "date"];
 
 formatColumn(teachingHTMLformatArray, teachingHTMLlocationArray, teachingElementArray, teachingObj);
+
 
 /*display public talks*/
 
@@ -475,8 +494,8 @@ formatColumn(pTalksHTMLformatArray, pTalksHTMLlocationArray, pTalksElementArray,
 /*books*/
 $("#publications").append(HTMLpublicationsBooks);
 var booksObj = publications.books;
-var booksHTMLlocationArray = ["#publications", ".publication-entry:last"];
-var booksHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var booksHTMLlocationArray = ["#publications", ".books-entry:last"];
+var booksHTMLformatArray = [HTMLbooksStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var booksElementArray = ["title", "data"];
 
 formatColumn(booksHTMLformatArray, booksHTMLlocationArray, booksElementArray, booksObj);
@@ -484,8 +503,8 @@ formatColumn(booksHTMLformatArray, booksHTMLlocationArray, booksElementArray, bo
 /*articles, essays, other contributions*/
 $("#publications").append(HTMLpublicationsArtEssOth);
 var artEssOthObj = publications.articlesEssaysOthers;
-var artEssOthHTMLlocationArray = ["#publications", ".publication-entry:last"];
-var artEssOthHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var artEssOthHTMLlocationArray = ["#publications", ".artEssOth-entry:last"];
+var artEssOthHTMLformatArray = [HTMLartEssOthStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var artEssOthElementArray = ["title", "data"];
 
 formatColumn(artEssOthHTMLformatArray, artEssOthHTMLlocationArray, artEssOthElementArray, artEssOthObj);
@@ -493,8 +512,8 @@ formatColumn(artEssOthHTMLformatArray, artEssOthHTMLlocationArray, artEssOthElem
 /*bookReviews*/
 $("#publications").append(HTMLpublicationsReviews);
 var reviewsObj = publications.bookReviews;
-var reviewsHTMLlocationArray = ["#publications", ".publication-entry:last"];
-var reviewsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var reviewsHTMLlocationArray = ["#publications", ".review-entry:last"];
+var reviewsHTMLformatArray = [HTMLreviewsStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var reviewsElementArray = ["title", "data"];
 
 formatColumn(reviewsHTMLformatArray, reviewsHTMLlocationArray, reviewsElementArray, reviewsObj);
@@ -502,8 +521,8 @@ formatColumn(reviewsHTMLformatArray, reviewsHTMLlocationArray, reviewsElementArr
 /*interviews*/
 $("#publications").append(HTMLpublicationsInterviews);
 var interviewsObj = publications.interviews;
-var interviewsHTMLlocationArray = ["#publications", ".publication-entry:last"];
-var interviewsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData];
+var interviewsHTMLlocationArray = ["#publications", ".interview-entry:last"];
+var interviewsHTMLformatArray = [HTMLinterviewsStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var interviewsElementArray = ["title", "data"];
 
 formatColumn(interviewsHTMLformatArray, interviewsHTMLlocationArray, interviewsElementArray, interviewsObj);
@@ -511,8 +530,8 @@ formatColumn(interviewsHTMLformatArray, interviewsHTMLlocationArray, interviewsE
 /*blog entries*/
 $("#publications").append(HTMLpublicationsBlogs);
 var blogsObj = publications.blogEntries;
-var blogsHTMLlocationArray = ["#publications", ".publication-entry:last"];
-var blogsHTMLformatArray = [HTMLpublicationsStart, HTMLpublicationsTitle, HTMLpublicationsData, HTMLpublicationsURL];
+var blogsHTMLlocationArray = ["#publications", ".blog-entry:last"];
+var blogsHTMLformatArray = [HTMLblogsStart, HTMLpublicationsTitle, HTMLpublicationsData, HTMLpublicationsURL];
 var blogsElementArray = ["title", "data", "url"];
 
 formatColumn(blogsHTMLformatArray, blogsHTMLlocationArray, blogsElementArray, blogsObj);
@@ -528,7 +547,7 @@ formatColumn(projectsHTMLformatArray, projectsHTMLlocationArray, projectElementA
 /*display education*/
 /*schools*/
 var schoolsObj = education.schools;
-var schoolsHTMLlocationArray = ["#education", ".education-entry:last"];
+var schoolsHTMLlocationArray = ["#education", ".school-entry:last"];
 var schoolsHTMLformat = [HTMLschoolStart, HTMLschoolName, HTMLschoolDegree, HTMLschoolDates, HTMLschoolLocation, HTMLschoolMajor];
 var schoolsElements = ["name", "degree", "dates", "city", "major"];
 
@@ -538,19 +557,21 @@ formatColumn(schoolsHTMLformat, schoolsHTMLlocationArray, schoolsElements, schoo
 $("#education").append(HTMLonlineClasses);
 
 var onlineCoursesObj = education["online courses"];
-var onlineCoursesHTMLlocationArray = ["#education", ".education-entry:last"];
-var onlineCoursesHTMLformat = [HTMLschoolStart, HTMLonlineTitle, HTMLonlineSchool, HTMLonlineDates, HTMLonlineURL];
+var onlineCoursesHTMLlocationArray = ["#education", ".class-entry:last"];
+var onlineCoursesHTMLformat = [HTMLclassesStart, HTMLonlineTitle, HTMLonlineSchool, HTMLonlineDates, HTMLonlineURL];
 var onlineCoursesElements = ["title", "school", "dates", "url"];
 
 formatColumn(onlineCoursesHTMLformat, onlineCoursesHTMLlocationArray, onlineCoursesElements, onlineCoursesObj);
 
 
-
-
-
-
-
-
+/*only display stuff for web-dev*/
+$("#teaching").hide();
+$("#public-talks").hide();
+$(".books-entry").hide();
+$(".artEssOth-entry").hide();
+$(".review-entry").hide();
+$(".interview-entry").hide();
+$("#fellowships-and-awards").hide();
 
 /*gather click locations*/
 $(document).click(function(loc) {

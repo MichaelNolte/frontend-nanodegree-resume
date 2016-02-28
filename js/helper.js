@@ -48,12 +48,18 @@ var HTMLpTalksData = '<p>%data%';
 var HTMLpTalksDate = ' -- %data%<br></p>'; /*the last line's a hack; not a good one i admit; deal with css layout later and erase last line*/
 
 
-var HTMLpublicationsBooks = '<h3>books</h3>';
-var HTMLpublicationsArtEssOth = '<h3>articles, essays, and other contributions</h3>'
-var HTMLpublicationsReviews = '<h3>book reviews</h3>'
-var HTMLpublicationsInterviews = '<h3>interviews</h3>'
-var HTMLpublicationsBlogs = '<h3>blog entries</h3>'
+var HTMLpublicationsBooks = '<div class="books-entry"><h3>books</h3></div>';
+var HTMLpublicationsArtEssOth = '<div class="artEssOth-entry"><h3>articles, essays, and other contributions</h3><div>'
+var HTMLpublicationsReviews = '<div class="review-entry"><h3>book reviews</h3></div>'
+var HTMLpublicationsInterviews = '<div class="interview-entry"><h3>interviews</h3></div>'
+var HTMLpublicationsBlogs = '<div class="blog-entry"><h3>blog entries</h3></div>'
+var HTMLbooksStart = '<div class="books-entry"></div>';
+var HTMLartEssOthStart = '<div class="artEssOth-entry"></div>';
+var HTMLreviewsStart = '<div class="review-entry"></div>';
+var HTMLinterviewsStart = '<div class="interview-entry"></div>';
+var HTMLblogsStart = '<div class="blog-entry"></div>';
 var HTMLpublicationsStart = '<div class="publication-entry"></div>';
+
 var HTMLpublicationsTitle = '<a href="#">%data%</a>';
 var HTMLpublicationsData = '<p>%data%</p>';
 var HTMLpublicationsURL = '<a href="#">%data%</a>';
@@ -64,14 +70,14 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
+var HTMLschoolStart = '<div class="school-entry"></div>';
+var HTMLclassesStart = '<div class="class-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-
-var HTMLonlineClasses = '<h3>online classes</h3>';
+var HTMLonlineClasses = '<div class="class-entry"><h3>online classes</h3></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -81,8 +87,56 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
+
+
+
+
+
+
+
+$(document).ready(function() {
+  $('button').click(function() {
+    if(cvType === "web") {
+      $("#teaching").hide();
+      $("#public-talks").hide();
+      $(".books-entry").hide();
+      $(".artEssOth-entry").hide();
+      $(".review-entry").hide();
+      $(".interview-entry").hide();
+      $("#fellowships-and-awards").hide();
+      $(".class-entry").show();
+      $("#projects").show();
+    }
+    else if(cvType === "corp") {
+      $("#teaching").show();
+      $("#public-talks").hide();
+      $(".books-entry").hide();
+      $(".artEssOth-entry").hide();
+      $(".review-entry").hide();
+      $(".interview-entry").hide();
+      $("#fellowships-and-awards").hide();
+      $(".class-entry").hide();
+      $("#projects").hide();
+    }
+    else {
+      $("#teaching").show();
+      $("#public-talks").show();
+      $(".books-entry").show();
+      $(".artEssOth-entry").show();
+      $(".review-entry").show();
+      $(".interview-entry").show();
+      $("#fellowships-and-awards").show();
+      $(".class-entry").hide();
+      $("#projects").hide();
+    }
+
+
+
+  });
+});
+
+
+/*The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
   $('button').click(function() {

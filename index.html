@@ -23,16 +23,17 @@
     display by looking at the id or at what's written between the <h2> tags.
     -->
 
-<div class="top-menu">
-      <button type="button" class="btn-web">Web Dev</button>
-      <button type="button" class="btn-corp">Corporate</button>
-      <button type="button" class="btn-academic">Academic</button>
+    <div class="top-menu">
+      <button type="button" class="btn-web" id="web">Web Dev</button>
+      <button type="button" class="btn-corp" id="corp">Corporate</button>
+      <button type="button" class="btn-academic" id="academic">Academic</button>
     </div>
 
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
+
     <div id="workExperience" class="gray">
       <h2>work experience</h2>
     </div>
@@ -45,7 +46,7 @@
     <div id="publications">
       <h2>publications</h2>
     </div>
-    <div id="fellowships and awards" class="gray">
+    <div id="fellowships-and-awards" class="gray">
       <h2>fellowships and awards</h2>
     </div>
     <div id="projects">
@@ -63,6 +64,7 @@
       </ul>
     </div>
   </div>
+
 
   <script src="js/resumeBuilder.js"></script>
 
@@ -102,7 +104,7 @@
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.backgroundColor = '#000000';
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
+    if(document.getElementsByClassName('school-entry').length === 0) {
       document.getElementById('education').style.backgroundColor = '#000000';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {

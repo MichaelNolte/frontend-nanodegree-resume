@@ -14,31 +14,24 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+.top-menu {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%
+}
+
 .btn-web,
 .btn-corp,
 .btn-academic {
   font-size: 12px;
-  background-color: #f44336;
-  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
   margin: 2%;
   display: inline-block;
+  border: 0;
+  color: rgba(255,255,255, 0.6);
 
 }
 
-.btn-web {
-  top: 5%;
-  right: 5%;
-}
-
-.btn-corp {
-  top: 5%;
-  right: 20%;
-}
-
-.btn-academic {
-  top: 5%;
-  right: 35%;
-}
 .clear-fix {
   overflow: auto;
 }
@@ -48,7 +41,13 @@ h6 {
 .project-entry,
 .teaching-entry,
 .ptalks-entry,
-.publication-entry {
+.books-entry,
+.artEssOth-entry,
+.review-entry,
+.interview-entry,
+.blog-entry,
+.school-entry,
+.class-entry {
   padding: 0 5%;
 }
 
@@ -82,7 +81,6 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
   padding:10px 5%;
