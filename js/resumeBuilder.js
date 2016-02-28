@@ -4,7 +4,7 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var bio = {
 	"name": "michael nolte",
-	"role": "udacity student",
+	"role": "web developer",
 	"skills": [
 		"html", "css", "javaScript", "jQuery", "bootstrap"],
 	"contacts": {
@@ -15,7 +15,7 @@ var bio = {
 		"location": "frankfurt, germany"
 	},
 	"pictureURL": "images/fry.jpg",
-	"welcome message": "hello. i am michael, and i take courses at udacity."
+	"welcome message": "hello, i am michael. i want to learn code. that is why i take classes at udacity. but i am not only a web developer. i am also a training specialist and an academic. you can see my different cvs by clicking on the buttons in the navigation bar above."
 };
 
 var work = {
@@ -25,7 +25,7 @@ var work = {
 			"title": "training coordinator",
 			"dates": "march 2016-today",
 			"location": "rüsselsheim, germany",
-			"description": "developed e-learning content, administrated the company's intranet, organised trainings, adapted international trainings to the german organization"
+			"description": "developed e-learning content, administrated the company's intranet, organised trainings, adapted international trainings to german requirements"
 		},
 		{
 			"employer": "sodexo services gmbh",

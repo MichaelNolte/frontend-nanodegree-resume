@@ -106,6 +106,10 @@ $(document).ready(function() {
       $("#fellowships-and-awards").hide();
       $(".class-entry").show();
       $("#projects").show();
+
+      $('#header').find('span').first().text("web developer");
+      $('.welcome-message').text("hello, i am michael. i want to learn code. that is why i take classes at udacity. but i am not only a web developer. i am also a training specialist and an academic. you can see my different cvs by clicking on the buttons in the navigation bar above.");
+
     }
     else if(cvType === "corp") {
       $("#teaching").show();
@@ -117,6 +121,9 @@ $(document).ready(function() {
       $("#fellowships-and-awards").hide();
       $(".class-entry").hide();
       $("#projects").hide();
+
+      $('#header').find('span').first().text("training specialist");
+      $('.welcome-message').text("i work at the intersection of internal communication and hr. i develop e-learnings and adapt international trainings to the requirements of the d|a|ch region. i am also in charge of administrating the hr section of our intranet, organizing events, and supporting hr projects.");
     }
     else {
       $("#teaching").show();
@@ -128,6 +135,9 @@ $(document).ready(function() {
       $("#fellowships-and-awards").show();
       $(".class-entry").hide();
       $("#projects").hide();
+
+      $('#header').find('span').first().text("historian");
+      $('.welcome-message').text("i pursue my ph.d. in modern european history at clark university. i successfully passed my comps and reached the abd phase. my dissertation is about the hadamar asylum and killing center during national socialism.");
     }
 
 
