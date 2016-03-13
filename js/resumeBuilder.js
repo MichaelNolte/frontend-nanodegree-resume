@@ -15,8 +15,22 @@ var bio = {
 		"location": "frankfurt, germany"
 	},
 	"pictureURL": "images/fry.jpg",
-	"welcome message": "hello, i am michael. i want to learn code. that is why i take classes at udacity. but i am not only a web developer. i am also a training specialist and an academic. you can see my different cvs by clicking on the buttons in the navigation bar above."
+	"welcome message": "hello, i am michael. i learn coding. that is why i take classes at udacity. but i am not only a web developer. i am also a training specialist and an academic. you can see my resumees by clicking on the buttons in the navigation bar above."
 };
+
+/*alternative roles for other cv profiles*/
+var webRole = bio.role;
+var corpRole = "training specialist";
+var academicRole = "historian";
+
+/*alternative welcome messages for other cv profiles*/
+
+var webWelcome = bio["welcome message"];
+var corpWelcome = "i work at the intersection of internal communication and hr. i develop e-learnings and adapt international trainings to the requirements of the d|a|ch region. i am also in charge of administrating the hr section of our intranet, organizing events, and supporting hr projects.";
+var academicWelcome = "i pursue my ph.d. in modern european history at clark university. i successfully passed my comps and reached the abd phase. my dissertation is about the hadamar asylum and killing center during national socialism.";
+
+
+
 
 var work = {
 	"jobs": [
@@ -74,7 +88,7 @@ var work = {
 			"title": "intern",
 			"dates": "october 2001-march 2002",
 			"location": "frankfurt, germany",
-			"description": "preparied and published the book: gertrud müller: die erste hälfte meines lebens. erinnerungen 1915-1950. nach gesprächen aufgezeichnet von michael nolte und ursula krause-schmitt. herausgegeben von der lagergemeinschaft ravensbrück/ freundeskreis e.v."
+			"description": "prepared and published the book:<br>gertrud müller: die erste hälfte meines lebens. erinnerungen 1915-1950. nach gesprächen aufgezeichnet von michael nolte und ursula krause-schmitt. herausgegeben von der lagergemeinschaft ravensbrück/ freundeskreis e.v."
 		}
 	]
 };
@@ -381,7 +395,7 @@ var web = document.getElementById('web');
 var corp = document.getElementById('corp');
 var academic = document.getElementById('academic');
 
-var cvType;
+var cvType = "web";
 
 web.onclick = function() {
 	cvType = "web";
@@ -393,6 +407,39 @@ corp.onclick = function() {
 
 academic.onclick = function() {
 	cvType = "academic";
+};
+
+/*toggle buttons*/
+exp.onclick = function() {
+	$(".hiddenExperienceContent").toggle();
+};
+
+teach.onclick = function() {
+	$(".hiddenTeachingContent").toggle();
+};
+
+pubTa.onclick = function() {
+	$(".hiddenPtalksContent").toggle();
+};
+
+publ.onclick = function() {
+	$(".hiddenPublicationsContent").toggle();
+};
+
+felAaw.onclick = function() {
+	$(".hiddenFellowshipsContent").toggle();
+};
+
+proj.onclick = function() {
+	$(".hiddenProjectsContent").toggle();
+};
+
+edu.onclick = function() {
+	$(".hiddenEducationContent").toggle();
+};
+
+onlClass.onclick = function() {
+	$(".hiddenClassesContent").toggle();
 };
 
 
@@ -464,7 +511,7 @@ if(bio.skills.length > 0) {
 
 /*display workExperience*/
 var workObj = work.jobs;
-var workHTMLlocationArray = ["#workExperience", ".work-entry:last"];
+var workHTMLlocationArray = [".hiddenExperienceContent", ".work-entry:last"];
 var workHTMLformatArray = [HTMLworkStart, HTMLworkEmployer, HTMLworkTitle, HTMLworkDates, HTMLworkLocation, HTMLworkDescription];
 var workElementArray = ["employer", "title", "dates", "location", "description"];
 
@@ -474,7 +521,7 @@ formatColumn(workHTMLformatArray, workHTMLlocationArray, workElementArray, workO
 
 
 var teachingObj = teaching.courses;
-var teachingHTMLlocationArray = ["#teaching", ".teaching-entry:last"];
+var teachingHTMLlocationArray = [".hiddenTeachingContent", ".teaching-entry:last"];
 var teachingHTMLformatArray = [HTMLteachingStart, HTMLteachingTitle, HTMLteachingProfessor, HTMLteachingDepartment, HTMLteachingDate];
 var teachingElementArray = ["title", "professor", "department", "date"];
 
@@ -484,7 +531,7 @@ formatColumn(teachingHTMLformatArray, teachingHTMLlocationArray, teachingElement
 /*display public talks*/
 
 var pTalksObj = publicTalks.publicTalks;
-var pTalksHTMLlocationArray = ["#public-talks", ".ptalks-entry:last"];
+var pTalksHTMLlocationArray = [".hiddenPtalksContent", ".ptalks-entry:last"];
 var pTalksHTMLformatArray = [HTMLpTalksStart, HTMLpTalksTitle, HTMLpTalksData, HTMLpTalksDate];
 var pTalksElementArray = ["title", "data", "date"];
 
@@ -492,73 +539,70 @@ formatColumn(pTalksHTMLformatArray, pTalksHTMLlocationArray, pTalksElementArray,
 
 /*display publications*/
 /*books*/
-$("#publications").append(HTMLpublicationsBooks);
+$(".hiddenPublicationsContent").append(HTMLpublicationsBooks);
 var booksObj = publications.books;
-var booksHTMLlocationArray = ["#publications", ".books-entry:last"];
+var booksHTMLlocationArray = [".hiddenPublicationsContent", ".books-entry:last"];
 var booksHTMLformatArray = [HTMLbooksStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var booksElementArray = ["title", "data"];
 
 formatColumn(booksHTMLformatArray, booksHTMLlocationArray, booksElementArray, booksObj);
 
 /*articles, essays, other contributions*/
-$("#publications").append(HTMLpublicationsArtEssOth);
+$(".hiddenPublicationsContent").append(HTMLpublicationsArtEssOth);
 var artEssOthObj = publications.articlesEssaysOthers;
-var artEssOthHTMLlocationArray = ["#publications", ".artEssOth-entry:last"];
+var artEssOthHTMLlocationArray = [".hiddenPublicationsContent", ".artEssOth-entry:last"];
 var artEssOthHTMLformatArray = [HTMLartEssOthStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var artEssOthElementArray = ["title", "data"];
 
 formatColumn(artEssOthHTMLformatArray, artEssOthHTMLlocationArray, artEssOthElementArray, artEssOthObj);
 
 /*bookReviews*/
-$("#publications").append(HTMLpublicationsReviews);
+$(".hiddenPublicationsContent").append(HTMLpublicationsReviews);
 var reviewsObj = publications.bookReviews;
-var reviewsHTMLlocationArray = ["#publications", ".review-entry:last"];
+var reviewsHTMLlocationArray = [".hiddenPublicationsContent", ".review-entry:last"];
 var reviewsHTMLformatArray = [HTMLreviewsStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var reviewsElementArray = ["title", "data"];
 
 formatColumn(reviewsHTMLformatArray, reviewsHTMLlocationArray, reviewsElementArray, reviewsObj);
 
 /*interviews*/
-$("#publications").append(HTMLpublicationsInterviews);
+$(".hiddenPublicationsContent").append(HTMLpublicationsInterviews);
 var interviewsObj = publications.interviews;
-var interviewsHTMLlocationArray = ["#publications", ".interview-entry:last"];
+var interviewsHTMLlocationArray = [".hiddenPublicationsContent", ".interview-entry:last"];
 var interviewsHTMLformatArray = [HTMLinterviewsStart, HTMLpublicationsTitle, HTMLpublicationsData];
 var interviewsElementArray = ["title", "data"];
 
 formatColumn(interviewsHTMLformatArray, interviewsHTMLlocationArray, interviewsElementArray, interviewsObj);
 
 /*blog entries*/
-$("#publications").append(HTMLpublicationsBlogs);
+/* $("#publications").append(HTMLpublicationsBlogs);
 var blogsObj = publications.blogEntries;
 var blogsHTMLlocationArray = ["#publications", ".blog-entry:last"];
 var blogsHTMLformatArray = [HTMLblogsStart, HTMLpublicationsTitle, HTMLpublicationsData, HTMLpublicationsURL];
 var blogsElementArray = ["title", "data", "url"];
 
-formatColumn(blogsHTMLformatArray, blogsHTMLlocationArray, blogsElementArray, blogsObj);
+formatColumn(blogsHTMLformatArray, blogsHTMLlocationArray, blogsElementArray, blogsObj); */
 
 /*display projects*/
 var projectsObj = projects.projects;
-var projectsHTMLlocationArray = ["#projects", ".project-entry:last"];
+var projectsHTMLlocationArray = [".hiddenProjectsContent", ".project-entry:last"];
 var projectsHTMLformatArray = [HTMLprojectStart, HTMLprojectTitle, HTMLprojectDates, HTMLprojectDescription, HTMLprojectImage];
 var projectElementArray = ["title", "dates", "description", "image"];
 
 formatColumn(projectsHTMLformatArray, projectsHTMLlocationArray, projectElementArray, projectsObj);
 
 /*display education*/
-/*schools*/
 var schoolsObj = education.schools;
-var schoolsHTMLlocationArray = ["#education", ".school-entry:last"];
+var schoolsHTMLlocationArray = [".hiddenEducationContent", ".school-entry:last"];
 var schoolsHTMLformat = [HTMLschoolStart, HTMLschoolName, HTMLschoolDegree, HTMLschoolDates, HTMLschoolLocation, HTMLschoolMajor];
 var schoolsElements = ["name", "degree", "dates", "city", "major"];
 
 formatColumn(schoolsHTMLformat, schoolsHTMLlocationArray, schoolsElements, schoolsObj);
 
-/*online classes*/
-$("#education").append(HTMLonlineClasses);
-
+/*display online classes*/
 var onlineCoursesObj = education["online courses"];
-var onlineCoursesHTMLlocationArray = ["#education", ".class-entry:last"];
-var onlineCoursesHTMLformat = [HTMLclassesStart, HTMLonlineTitle, HTMLonlineSchool, HTMLonlineDates, HTMLonlineURL];
+var onlineCoursesHTMLlocationArray = [".hiddenClassesContent", ".class-entry:last"];
+var onlineCoursesHTMLformat = [HTMLonlineStart, HTMLonlineTitle, HTMLonlineSchool, HTMLonlineDates, HTMLonlineURL];
 var onlineCoursesElements = ["title", "school", "dates", "url"];
 
 formatColumn(onlineCoursesHTMLformat, onlineCoursesHTMLlocationArray, onlineCoursesElements, onlineCoursesObj);
@@ -566,12 +610,9 @@ formatColumn(onlineCoursesHTMLformat, onlineCoursesHTMLlocationArray, onlineCour
 
 /*only display stuff for web-dev*/
 $("#teaching").hide();
-$("#public-talks").hide();
-$(".books-entry").hide();
-$(".artEssOth-entry").hide();
-$(".review-entry").hide();
-$(".interview-entry").hide();
+$("#publicTalks").hide();
 $("#fellowships-and-awards").hide();
+$("#publications").hide();
 
 /*gather click locations*/
 $(document).click(function(loc) {

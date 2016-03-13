@@ -49,16 +49,15 @@ var HTMLpTalksDate = ' -- %data%<br></p>'; /*the last line's a hack; not a good 
 
 
 var HTMLpublicationsBooks = '<div class="books-entry"><h3>books</h3></div>';
-var HTMLpublicationsArtEssOth = '<div class="artEssOth-entry"><h3>articles, essays, and other contributions</h3><div>'
-var HTMLpublicationsReviews = '<div class="review-entry"><h3>book reviews</h3></div>'
-var HTMLpublicationsInterviews = '<div class="interview-entry"><h3>interviews</h3></div>'
-var HTMLpublicationsBlogs = '<div class="blog-entry"><h3>blog entries</h3></div>'
+var HTMLpublicationsArtEssOth = '<div class="artEssOth-entry"><h3>articles, essays, and other contributions</h3><div>';
+var HTMLpublicationsReviews = '<div class="review-entry"><h3>book reviews</h3></div>';
+var HTMLpublicationsInterviews = '<div class="interview-entry"><h3>interviews</h3></div>';
+var HTMLpublicationsBlogs = '<div class="blog-entry"><h3>blog entries</h3></div>';
 var HTMLbooksStart = '<div class="books-entry"></div>';
 var HTMLartEssOthStart = '<div class="artEssOth-entry"></div>';
 var HTMLreviewsStart = '<div class="review-entry"></div>';
 var HTMLinterviewsStart = '<div class="interview-entry"></div>';
 var HTMLblogsStart = '<div class="blog-entry"></div>';
-var HTMLpublicationsStart = '<div class="publication-entry"></div>';
 
 var HTMLpublicationsTitle = '<a href="#">%data%</a>';
 var HTMLpublicationsData = '<p>%data%</p>';
@@ -71,13 +70,13 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="school-entry"></div>';
-var HTMLclassesStart = '<div class="class-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-var HTMLonlineClasses = '<div class="class-entry"><h3>online classes</h3></div>';
+
+var HTMLonlineStart = '<div class="class-entry"></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -98,46 +97,34 @@ $(document).ready(function() {
   $('button').click(function() {
     if(cvType === "web") {
       $("#teaching").hide();
-      $("#public-talks").hide();
-      $(".books-entry").hide();
-      $(".artEssOth-entry").hide();
-      $(".review-entry").hide();
-      $(".interview-entry").hide();
+      $("#publicTalks").hide();
       $("#fellowships-and-awards").hide();
-      $(".class-entry").show();
       $("#projects").show();
-
-      $('#header').find('span').first().text("web developer");
-      $('.welcome-message').text("hello, i am michael. i want to learn code. that is why i take classes at udacity. but i am not only a web developer. i am also a training specialist and an academic. you can see my different cvs by clicking on the buttons in the navigation bar above.");
+      $("#publications").hide();
+      $("#onlineClasses").show();
+      $('#header').find('span').first().text(webRole);
+      $('.welcome-message').text(webWelcome);
 
     }
     else if(cvType === "corp") {
       $("#teaching").show();
-      $("#public-talks").hide();
-      $(".books-entry").hide();
-      $(".artEssOth-entry").hide();
-      $(".review-entry").hide();
-      $(".interview-entry").hide();
+      $("#publicTalks").hide();
       $("#fellowships-and-awards").hide();
-      $(".class-entry").hide();
       $("#projects").hide();
-
-      $('#header').find('span').first().text("training specialist");
-      $('.welcome-message').text("i work at the intersection of internal communication and hr. i develop e-learnings and adapt international trainings to the requirements of the d|a|ch region. i am also in charge of administrating the hr section of our intranet, organizing events, and supporting hr projects.");
+      $("#publications").hide();
+      $("#onlineClasses").hide();
+      $('#header').find('span').first().text(corpRole);
+      $('.welcome-message').text(corpWelcome);
     }
     else {
       $("#teaching").show();
-      $("#public-talks").show();
-      $(".books-entry").show();
-      $(".artEssOth-entry").show();
-      $(".review-entry").show();
-      $(".interview-entry").show();
+      $("#publicTalks").show();
       $("#fellowships-and-awards").show();
-      $(".class-entry").hide();
       $("#projects").hide();
-
-      $('#header').find('span').first().text("historian");
-      $('.welcome-message').text("i pursue my ph.d. in modern european history at clark university. i successfully passed my comps and reached the abd phase. my dissertation is about the hadamar asylum and killing center during national socialism.");
+      $("#publications").show();
+      $("#onlineClasses").hide();
+      $('#header').find('span').first().text(academicRole);
+      $('.welcome-message').text(academicWelcome);
     }
 
 

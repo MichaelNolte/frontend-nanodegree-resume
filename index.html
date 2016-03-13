@@ -24,37 +24,127 @@
     -->
 
     <div class="top-menu">
-      <button type="button" class="btn-web" id="web">Web Dev</button>
-      <button type="button" class="btn-corp" id="corp">Corporate</button>
-      <button type="button" class="btn-academic" id="academic">Academic</button>
-    </div>
+      <div class="button-text">
+        <div class="button-overlay">
+          <button type="button" class="btn-web" id="web">
+            <img src="images/web.svg" class="web-icon" alt="web development cv icon">
+          </button>
+        </div>
+        <br>web development cv
+      </div>
 
+      <div class="button-text">
+        <div class="button-overlay">
+          <button type="button" class="btn-corp" id="corp">
+            <img src="images/corporate.svg" class="business-icon" alt="corporate cv icon">
+          </button>
+        </div>
+        <br>corporate cv
+      </div>
+
+      <div class="button-text">
+        <div class="button-overlay">
+          <button type="button" class="btn-academic" id="academic">
+            <img src="images/academic.svg" class="academic-icon" alt="corporate cv icon">
+          </button>
+        </div>
+        <br>academic cv</button>
+      </div>
+    </div>
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
+
     <div style="clear: both;"></div>
 
     <div id="workExperience" class="gray">
-      <h2>work experience</h2>
+      <div class="viewableContent">
+        <h2>work experience</h2>
+        <button type="button" class="btn-toggle" id="exp">
+          <img src="images/work.svg" class="experience-icon" alt="this icon shows a briefcase. it is a symbol for my work experience.">
+        </button>
+      </div>
+      <div class="hiddenExperienceContent" style="display:none;">
+      </div>
     </div>
+
     <div id="teaching">
-      <h2>teaching</h2>
+      <div class="viewableContent">
+        <h2>teaching</h2>
+        <button type="button" class="btn-toggle" id="teach">
+          <img src="images/teaching.svg" class="teaching-icon" alt="this icon shows a teacher. it is a symbol for my teaching experience.">
+        </button>
+      </div>
+      <div class="hiddenTeachingContent" style="display:none;">
+      </div>
     </div>
-    <div id="public-talks" class="gray">
-      <h2>public talks</h2>
+
+    <div id="publicTalks" class="gray">
+      <div class="viewableContent">
+        <h2>public talks</h2>
+        <button type="button" class="btn-toggle" id="pubTa">
+          <img src="images/public-talks.svg" class="public-talks-icon" alt="this icon shows a man behind a lectern. it is a symbol for the public talks i gave.">
+        </button>
+      </div>
+      <div class="hiddenPtalksContent" style="display:none;">
+      </div>
     </div>
+
     <div id="publications">
-      <h2>publications</h2>
+      <div class="viewableContent">
+        <h2>publications</h2>
+        <button type="button" class="btn-toggle" id="publ">
+        <img src="images/publications.svg" class="publications-icon" alt="this icon shows books. it is a symbol for my publications.">
+      </button>
+      </div>
+      <div class="hiddenPublicationsContent" style="display:none;">
+      </div>
     </div>
+
     <div id="fellowships-and-awards" class="gray">
-      <h2>fellowships and awards</h2>
+      <div class="viewableContent">
+        <h2>fellowships and awards</h2>
+        <button type="button" class="btn-toggle" id="felAaw">
+        <img src="images/fellowships.svg" class="fellowships-icon" alt="this icon shows a badge. it is a symbol for the awards i received.">
+      </button>
+      </div>
+      <div class="hiddenFellowshipsContent" style="display:none;">
+      </div>
     </div>
+
     <div id="projects">
-      <h2>projects</h2>
+      <div class="viewableContent">
+        <h2>projects</h2>
+        <button type="button" class="btn-toggle" id="proj">
+          <img src="images/projects.svg" class="projects-icon" alt="projects icon">
+        </button>
+      </div>
+      <div class="hiddenProjectsContent" style="display:none;">
+      </div>
     </div>
+
     <div id="education" class="gray">
-      <h2>education</h2>
+      <div class="viewableContent">
+        <h2>education</h2>
+        <button type="button" class="btn-toggle" id="edu">
+          <img src="images/education.svg" class="education-icon" alt="education icon">
+        </button>
+      </div>
+      <div class="hiddenEducationContent" style="display:none;">
+      </div>
     </div>
+
+    <div id="onlineClasses">
+      <div class="viewableContent">
+        <h2>online courses</h2>
+        <button type="button" class="btn-toggle" id="onlClass">
+          <img src="images/courses.svg" class="courses-icon" alt="online courses icon">
+        </button>
+      </div>
+      <div class="hiddenClassesContent" style="display:none;">
+      </div>
+    </div>
+
     <div id="mapDiv">
       <h2>where i've lived and worked</h2>
     </div>
@@ -104,9 +194,7 @@
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.backgroundColor = '#000000';
     }
-    if(document.getElementsByClassName('school-entry').length === 0) {
-      document.getElementById('education').style.backgroundColor = '#000000';
-    }
+
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.backgroundColor = '#000000';
     }
