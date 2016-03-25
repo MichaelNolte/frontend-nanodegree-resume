@@ -12,22 +12,21 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderName = '<div class="title-field"><h1 id="name">%data%<br></h1>';
+var HTMLheaderRole = '<span class="subtitle-text">%data%</span></div>';
 
-var HTMLcontactStart = '</h3><ul id="contacts" class="flex-box"></ul>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactStart = '<div class="contact-frame"><ul id="contacts" class="flex-box"></ul></div>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile: </span><span class="black-text">%data%  </span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">E-Mail: </span><span class="black-text">%data%  </span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">Twitter: </span><span class="black-text">%data%  </span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">Github: </span><span class="black-text">%data%  </span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location: </span><span class="black-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class = bio-row><div class="image-box"><img src="%data%" class="biopic"></div>';
+var HTMLwelcomeMsg = '<div class="message-box"><span class="welcome-message">%data%</span></div></div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<div class="skill-box"><ul id="skills" class="flex-box"></ul>';
+var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li></div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -82,7 +81,6 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
-var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
@@ -96,35 +94,135 @@ var googleMap = '<div id="map"></div>';
 $(document).ready(function() {
   $('button').click(function() {
     if(cvType === "web") {
-      $("#teaching").hide();
-      $("#publicTalks").hide();
-      $("#fellowships-and-awards").hide();
-      $("#projects").show();
-      $("#publications").hide();
-      $("#onlineClasses").show();
       $('#header').find('span').first().text(webRole);
       $('.welcome-message').text(webWelcome);
+      $("#group3").hide();
+      $("#group4").hide();
+      $("#group6").hide();
+      $("#group7").show();
+      $("#group5").hide();
+      $("#group9").show();
+
+      $("#buffer_teach").hide();
+      $("#buffer_publ").hide();
+      $("#buffer_proj").show();
+      $("#buffer_courses").show();
+
+      if ($("#group8 div.parallax__layer").hasClass("parallax__layer--back")) {
+        $("#group8 div.parallax__layer--back").removeClass('parallax__layer--back').addClass('parallax__layer--deep');
+        $("#group8 div.parallax__layer--deep div.work_background_front").removeClass('work_background_front').addClass('work_background_back');
+
+      }
+      else {}
+
+      if ($("#group10 div.parallax__layer").hasClass("parallax__layer--back")) {
+        $("#group10 div.parallax__layer--back").removeClass('parallax__layer--back').addClass('parallax__layer--deep');
+        $("#group11 div.parallax__layer--deep").removeClass('parallax__layer--deep').addClass('parallax__layer--back');
+
+
+      }
+      else {}
+
+      $("#mapDiv").css("padding-top", "20vh").css("padding-bottom", "30vh").css("top", "-45vh");
+
+      $("#group11 div.parallax__layer div.work_background_back_last").removeClass('work_background_back_last').addClass('work_background_front');
+
+      $("#group8").css("z-index", "2");
+      $("#group10").css("z-index", "3");
+      $("#group11").css("z-index", "3");
+
+      $("#group8 div.parallax__layer--base div.center button.btn-toggle-front").removeClass('btn-toggle-front').addClass('btn-toggle-back');
+
+      $("#group10 div.parallax__layer div.center button.btn-toggle-front").removeClass('btn-toggle-front').addClass('btn-toggle-back');
 
     }
+
     else if(cvType === "corp") {
-      $("#teaching").show();
-      $("#publicTalks").hide();
-      $("#fellowships-and-awards").hide();
-      $("#projects").hide();
-      $("#publications").hide();
-      $("#onlineClasses").hide();
       $('#header').find('span').first().text(corpRole);
       $('.welcome-message').text(corpWelcome);
+
+      $("#group3").show();
+      $("#group4").hide();
+      $("#group5").hide();
+      $("#group6").hide();
+      $("#group7").hide();
+      $("#group9").hide();
+
+      $("#buffer_teach").show();
+      $("#buffer_publ").hide();
+      $("#buffer_proj").hide();
+      $("#buffer_courses").hide();
+
+      if ($("#group8 div.parallax__layer").hasClass("parallax__layer--back")) {
+        $("#group8 div.parallax__layer--back").removeClass('parallax__layer--back').addClass('parallax__layer--deep');
+        $("#group8 div.parallax__layer--deep div.work_background_front").removeClass('work_background_front').addClass('work_background_back');
+
+      }
+      else {}
+
+      if ($("#group10 div.parallax__layer").hasClass("parallax__layer--deep")) {
+        $("#group10 div.parallax__layer--deep").removeClass('parallax__layer--deep').addClass('parallax__layer--back');
+        $("#group11 div.parallax__layer--back").removeClass('parallax__layer--back').addClass('parallax__layer--deep');
+      }
+      else {}
+
+      $("#group8").css("z-index", "2");
+      $("#group10").css("z-index", "3");
+      $("#group11").css("z-index", "1");
+
+      $("#mapDiv").css("padding-bottom", "10vh").css("padding-top", "10vh").css("top", "0");
+
+      $("#group10 div.parallax__layer div.center button.btn-toggle-back").removeClass('btn-toggle-back').addClass('btn-toggle-front');
+
+
+      $("#group11 div.parallax__layer div.work_background_front").removeClass('work_background_front').addClass('work_background_back_last');
+
+      $("#group8 div.parallax__layer--base div.center button.btn-toggle-front").removeClass('btn-toggle-front').addClass('btn-toggle-back');
+
     }
     else {
-      $("#teaching").show();
-      $("#publicTalks").show();
-      $("#fellowships-and-awards").show();
-      $("#projects").hide();
-      $("#publications").show();
-      $("#onlineClasses").hide();
       $('#header').find('span').first().text(academicRole);
       $('.welcome-message').text(academicWelcome);
+      $("#group3").show();
+      $("#group4").show();
+      $("#group5").show();
+      $("#group6").show();
+      $("#group7").hide();
+      $("#group9").hide();
+
+      $("#buffer_teach").show();
+      $("#buffer_publ").show();
+      $("#buffer_proj").hide();
+      $("#buffer_courses").show();
+
+      if ($("#group8 div.parallax__layer").hasClass("parallax__layer--deep")) {
+        $("#group8 div.parallax__layer--deep").removeClass('parallax__layer--deep').addClass('parallax__layer--back');
+        $("#group8 div.parallax__layer--back div.work_background_back").removeClass('work_background_back').addClass('work_background_front');
+
+      }
+      else {}
+
+      if ($("#group10 div.parallax__layer").hasClass("parallax__layer--back")) {
+        $("#group10 div.parallax__layer--back").removeClass('parallax__layer--back').addClass('parallax__layer--deep');
+        $("#group11 div.parallax__layer--deep").removeClass('parallax__layer--deep').addClass('parallax__layer--back');
+
+      }
+      else {}
+
+      $("#group11 div.parallax__layer div.work_background_back_last").removeClass('work_background_back_last').addClass('work_background_front');
+
+      $("#mapDiv").css("padding-top", "20vh").css("padding-bottom", "30vh").css("top", "-45vh");
+
+      $("#group8").css("z-index", "4");
+      $("#group10").css("z-index", "2");
+      $("#group11").css("z-index", "3");
+
+      $("#group8 div.parallax__layer--base div.center button.btn-toggle-back").removeClass('btn-toggle-back').addClass('btn-toggle-front');
+
+      $("#group10 div.parallax__layer div.center button.btn-toggle-front").removeClass('btn-toggle-front').addClass('btn-toggle-back');
+
+
+
     }
 
 
@@ -186,6 +284,7 @@ function initializeMap() {
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js.
   */
+
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 

@@ -1,0 +1,349 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>michael nolte, resume page</title>
+  <link href="css/normalize.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/helper.js"></script>
+
+
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <meta name="viewport" content="width=device-width">
+
+
+
+
+
+<body>
+  <div id="main">
+
+<!-- top bar -->
+
+    <div class="debug">
+      <label><input type="checkbox"> Debug</label>
+    </div>
+
+
+    <div class="top-menu">
+
+      <button type="button" class="btn-web" id="web">
+        <div class="button-text">
+          <div class="button-overlay">
+
+            <img src="images/web.svg" class="web-icon" alt="web development cv icon">
+          </div>
+        web development cv
+        </div>
+      </button>
+
+      <button type="button" class="btn-corp" id="corp">
+        <div class="button-text">
+          <div class="button-overlay">
+
+            <img src="images/corporate.svg" class="business-icon" alt="corporate cv icon">
+
+          </div>
+        corporate cv
+        </div>
+      </button>
+
+      <button type="button" class="btn-academic" id="academic">
+        <div class="button-text">
+          <div class="button-overlay">
+
+            <img src="images/academic.svg" class="academic-icon" alt="corporate cv icon">
+
+          </div>
+          academic cv</button>
+        </div>
+      </button>
+    </div>
+
+<!-- overlays -->
+    <button class="btn-generic-toggle" style="display: none;" id="exp2"></button>
+    <div class="hiddenExperienceContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="teach2"></button>
+    <div class="hiddenTeachingContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="pubTa2"></button>
+    <div class="hiddenPtalksContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="publ2"></button>
+    <div class="hiddenPublicationsContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="felAaw2"></button>
+    <div class="hiddenFellowshipsContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="proj2"></button>
+    <div class="hiddenProjectsContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="edu2"></button>
+    <div class="hiddenEducationContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="onlClass2"></button>
+    <div class="hiddenClassesContent" style="display: none;"></div>
+
+    <button class="btn-generic-toggle" style="display: none;" id="googlemapper2"></button>
+    <div class="hiddenMapsContent" style="display: none;"></div>
+
+<!-- header -->
+
+
+  <div class="parallax">
+
+    <div id="group1" class="parallax__group">
+
+      <div class="parallax__layer parallax__layer--base">
+        <div id="header" class="center-content clear-fix">
+          <ul id="topContacts" class="flex-box"></ul>
+        </div>
+
+      </div>
+
+      <div class="parallax__layer parallax__layer--back">
+        <div class="header_background">
+          <img src="images/header_back.jpg">
+        </div>
+      </div>
+    </div>
+
+<!-- buffer -->
+
+    <div id="buffer_head" class="parallax__group--back">
+      <div class="parallax__layer parallax__layer--base">
+
+      </div>
+
+    </div>
+
+<!-- work experience -->
+
+    <div id="group2" class="parallax__group">
+
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+          <button type="button" class="btn-toggle-back" id="exp">
+            <span>WORK EXPERIENCE</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="work_background_first">
+          <img src="images/work.jpg">
+        </div>
+      </div>
+    </div>
+
+
+<!-- teaching -->
+
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+          <button type="button" class="btn-toggle-front" id="teach">
+            <span>TEACHING</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="parallax__layer parallax__layer--back">
+          <div class="work_background_front">
+            <img src="images/teaching.jpg">
+          </div>
+        </div>
+    </div>
+
+
+<!-- buffer -->
+
+    <div id="buffer_teach" class="parallax__group--back">
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+
+<!-- public talks -->
+
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+        <button type="button" class="btn-toggle-back" id="pubTa">
+          <span>PUBLIC TALKS</span>
+        </button>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="work_background_back">
+            <img src="images/public-talks.jpg">
+        </div>
+      </div>
+    </div>
+
+
+<!-- publications -->
+
+    <div id="group5" class="parallax__group">
+
+
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+        <button type="button" class="btn-toggle-front" id="publ">
+          <span>PUBLICATIONS</span>
+        </button>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="work_background_front">
+          <img src="images/publications.jpg">
+        </div>
+      </div>
+    </div>
+
+<!-- buffer -->
+
+    <div id="buffer_publ" class="parallax__group--back">
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+
+<!-- fellowships and awards -->
+
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back">
+
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+        <button type="button" class="btn-toggle-back" id="felAaw">
+          <span>FELLOWSHIPS & AWARDS</span>
+        </button>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="work_background_back">
+          <img src="images/awards.jpg">
+        </div>
+      </div>
+    </div>
+
+<!-- projects -->
+
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+        <button type="button" class="btn-toggle-front" id="proj">
+          <span>PROJECTS</span>
+        </button>
+        </div>
+
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="work_background_front">
+          <img src="images/projects.jpg">
+        </div>
+      </div>
+    </div>
+
+<!-- buffer -->
+
+    <div id="buffer_proj" class="parallax__group--back">
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+
+<!-- education -->
+
+    <div id="group8" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+          <button type="button" class="btn-toggle-back" id="edu">
+            <span>EDUCATION</span>
+          </button>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="work_background_back">
+          <img src="images/education.jpg">
+        </div>
+      </div>
+    </div>
+
+<!-- online courses -->
+
+    <div id="group9" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+        <button type="button" class="btn-toggle-front" id="onlClass">
+          <span>ONLINE COURSES</span>
+        </button>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="work_background_front">
+          <img src="images/courses.jpg">
+        </div>
+      </div>
+    </div>
+
+
+<!-- buffer -->
+
+    <div id="buffer_courses" class="parallax__group--back">
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+
+<!-- maps -->
+
+    <div id="group10" class="parallax__group">
+
+      <div class="parallax__layer parallax__layer--base">
+        <div class="center">
+          <button type="button" class="btn-toggle-back" id="googlemapper">
+            <span>WHERE I LIVED AND WORKED</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="work_background_back">
+          <img src="images/space.jpg">
+        </div>
+     </div>
+    </div>
+
+    <div id="group11" class="parallax__group">
+
+      <div class="parallax__layer parallax__layer--back">
+        <div class="work_background_front">
+          <img src="images/header_back.jpg">
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+<script src="js/resumeBuilder.js"></script>
+<script>
+    var debugInput = document.querySelector("input");
+    function updateDebugState() {
+        document.body.classList.toggle('debug-on', debugInput.checked);
+    }
+    debugInput.addEventListener("click", updateDebugState);
+    updateDebugState();
+  </script>
+
+</div>
+</body>
+</html>

@@ -3,8 +3,8 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-	"name": "michael nolte",
-	"role": "web developer",
+	"name": "MICHAEL NOLTE",
+	"role": "Web Developer",
 	"skills": [
 		"html", "css", "javaScript", "jQuery", "bootstrap"],
 	"contacts": {
@@ -20,8 +20,8 @@ var bio = {
 
 /*alternative roles for other cv profiles*/
 var webRole = bio.role;
-var corpRole = "training specialist";
-var academicRole = "historian";
+var corpRole = "Training Specialist";
+var academicRole = "Historian";
 
 /*alternative welcome messages for other cv profiles*/
 
@@ -410,38 +410,115 @@ academic.onclick = function() {
 };
 
 /*toggle buttons*/
+
+
 exp.onclick = function() {
 	$(".hiddenExperienceContent").toggle();
+	$(".top-menu").toggle();
+	$("#exp2").toggle();
+};
+
+exp2.onclick = function() {
+	$(".hiddenExperienceContent").toggle();
+	$(".top-menu").toggle();
+	$("#exp2").toggle();
 };
 
 teach.onclick = function() {
 	$(".hiddenTeachingContent").toggle();
+	$(".top-menu").toggle();
+	$("#teach2").toggle();
+};
+
+teach2.onclick = function() {
+	$(".hiddenTeachingContent").toggle();
+	$(".top-menu").toggle();
+	$("#teach2").toggle();
 };
 
 pubTa.onclick = function() {
 	$(".hiddenPtalksContent").toggle();
+	$(".top-menu").toggle();
+	$("#pubTa2").toggle();
+};
+
+pubTa2.onclick = function() {
+	$(".hiddenPtalksContent").toggle();
+	$(".top-menu").toggle();
+	$("#pubTa2").toggle();
 };
 
 publ.onclick = function() {
 	$(".hiddenPublicationsContent").toggle();
+	$(".top-menu").toggle();
+	$("#publ2").toggle();
+};
+
+publ2.onclick = function() {
+	$(".hiddenPublicationsContent").toggle();
+	$(".top-menu").toggle();
+	$("#publ2").toggle();
 };
 
 felAaw.onclick = function() {
 	$(".hiddenFellowshipsContent").toggle();
+	$(".top-menu").toggle();
+	$("#felAaw2").toggle();
+};
+
+felAaw2.onclick = function() {
+	$(".hiddenFellowshipsContent").toggle();
+	$(".top-menu").toggle();
+	$("#felAaw2").toggle();
 };
 
 proj.onclick = function() {
 	$(".hiddenProjectsContent").toggle();
+	$(".top-menu").toggle();
+	$("#proj2").toggle();
+};
+
+proj2.onclick = function() {
+	$(".hiddenProjectsContent").toggle();
+	$(".top-menu").toggle();
+	$("#proj2").toggle();
 };
 
 edu.onclick = function() {
 	$(".hiddenEducationContent").toggle();
+	$(".top-menu").toggle();
+	$("#edu2").toggle();
+};
+
+edu2.onclick = function() {
+	$(".hiddenEducationContent").toggle();
+	$(".top-menu").toggle();
+	$("#edu2").toggle();
 };
 
 onlClass.onclick = function() {
 	$(".hiddenClassesContent").toggle();
+	$(".top-menu").toggle();
+	$("#onlClass2").toggle();
 };
 
+onlClass2.onclick = function() {
+	$(".hiddenClassesContent").toggle();
+	$(".top-menu").toggle();
+	$("#onlClass2").toggle();
+};
+
+googlemapper.onclick = function() {
+	$(".hiddenMapsContent").toggle();
+	$(".top-menu").toggle();
+	$("#googlemapper2").toggle();
+};
+
+googlemapper2.onclick = function() {
+	$(".hiddenMapsContent").toggle();
+	$(".top-menu").toggle();
+	$("#googlemapper2").toggle();
+};
 
 /*functions used to display page elements*/
 function countProperties(obj) {
@@ -484,9 +561,11 @@ function formatColumn(HTMLformatArray, HTMLlocationArray, elementArray, obj) {
 }
 
 /*display header ---> put code in function*/
-$("#header").append(formatLine(HTMLheaderName, bio.name));
-$("#header").append(formatLine(HTMLheaderRole, bio.role));
+var store1 = formatLine(HTMLheaderName, bio.name);
+var store2 = formatLine(HTMLheaderRole, bio.role);
+var store3 = store1 + store2;
 
+$("#header").append(store3);
 
 var contactsHTMLformatsArray = [HTMLmobile, HTMLemail, HTMLgithub, HTMLlinkedin, HTMLlocation]
 
@@ -497,8 +576,12 @@ $("#header").append(HTMLcontactStart);
 	i++
 }
 
-$("#header").append(formatLine(HTMLbioPic, bio.pictureURL));
-$("#header").append(formatLine(HTMLwelcomeMsg, bio["welcome message"]));
+var store1 = formatLine(HTMLbioPic, bio.pictureURL);
+var store2 = formatLine(HTMLwelcomeMsg, bio["welcome message"]);
+var store3 = store1 + store2;
+
+$("#header").append(store3);
+
 $("#header").append(HTMLskillsStart);
 
 if(bio.skills.length > 0) {
@@ -609,10 +692,12 @@ formatColumn(onlineCoursesHTMLformat, onlineCoursesHTMLlocationArray, onlineCour
 
 
 /*only display stuff for web-dev*/
-$("#teaching").hide();
-$("#publicTalks").hide();
-$("#fellowships-and-awards").hide();
-$("#publications").hide();
+$("#group3").hide();
+$("#group4").hide();
+$("#group6").hide();
+$("#group5").hide();
+$("#buffer_teach").hide();
+$("#buffer_publ").hide();
 
 /*gather click locations*/
 $(document).click(function(loc) {
@@ -645,7 +730,4 @@ function inName(bio_obj) {
 console.log(inName(bio));
 
 
-
-$("#main").append(internationalizeButton);
-
-$("#mapDiv").append(googleMap);
+$(".hiddenMapsContent").append(googleMap);
